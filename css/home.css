@@ -43,9 +43,9 @@ section .albums::-webkit-scrollbar-thumb{
     flex-direction: column;
 }
 
+
 .navegador nav ul li{
     border: 2px solid var(--color-gold);
-    /* padding: 2em 1em; */
     cursor: pointer;
     display: flex;
     justify-content: start;
@@ -84,18 +84,23 @@ section .albums::-webkit-scrollbar-thumb{
 
 .navegador .cancion_actual{
     margin: 1em 0;
-    text-align: center;
     display: flex;
     justify-content: center;
 }
 
+.navegador .cancion_actual div{
+    position: relative;
+}
+
 .navegador .cancion_actual img{
-    width: 250px;
-    height: 250px;
+    width: 15em;
+    height: 20em;
 } 
 
 .navegador .cancion_actual i{
     cursor: pointer;
+    position: absolute;
+    right: 0;
 }
 
 .navegador p{
@@ -133,11 +138,11 @@ section{
 
 section .albums{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    
     flex-wrap: wrap;
     overflow-y: scroll;
     height: 38rem;
+    width: 100%;
 }
 
 section .albums .album{
@@ -149,6 +154,10 @@ section .albums .album{
     transition: all .5s ease;
 }
 
+section .albums .album a{
+    position: relative;
+}
+
 section .albums img{
     width: 200px;
     height: 200px;
@@ -157,11 +166,8 @@ section .albums img{
 
 section .albums .album i{
     cursor: pointer;
-}
-
-section .albums .album:hover{
-    scale: 1.2;
-    transition: all .5s ease;
+    position: absolute;
+    right: 0;
 }
 
 section audio{
@@ -191,17 +197,13 @@ footer{
 /*---------------------------------------------*/
 /*NAVEGADOR*/
 
-.navegador nav ul li{
-    padding: 1.5em .5em;
-}
-
 .navegador nav ul li a{
     font-size: 1.3em;
 }
 
 .navegador .cancion_actual img{
-    width: 220px;
-    height: 220px;
+    width: 12em;
+    height: 12em;
 }
 
 .navegador p{
@@ -259,6 +261,10 @@ section audio{
 
 @media screen and (max-width: 1024px){
     
+h1{
+    font-size: 1.5em;
+}
+
 /*---------------------------------------------*/
 /*NAVEGADOR*/
 
@@ -267,8 +273,8 @@ section audio{
 }
 
 .navegador .cancion_actual img{
-    width: 180px;
-    height: 180px;
+    width: 10em;
+    height: 10em;
 }
 
 .navegador p{
@@ -320,20 +326,25 @@ i{
     font-size: 1.2em;
 }
 
+h1{
+    font-size: 1.2em;
+}
+
 /*---------------------------------------------*/
 /*NAVEGADOR*/
 
 .navegador nav ul li a{
-    font-size: .9em;
+    font-size: 1em;
+    padding: 1em .2em;
 }
     
 .navegador .cancion_actual img{
-    width: 140px;
-    height: 140px;
+    width: 6em;
+    height: 8em;
 }
     
 .navegador p{
-    font-size: .8em;
+    font-size: .9em;
 }
     
     
@@ -349,14 +360,21 @@ header .perfil .nombre h2{
 }
     
 header .perfil .nombre a{
-    font-size: 1em;
+    font-size: .8em;
 }
     
 /*SECTION*/
-    
+
+section .albums .album{
+    text-align: center;
+    width: 45%;
+    padding: 1em;
+}
+
 section audio{
     width: 20em;
-    height: 3em;
+    height: 2.5em;
+    margin: .5em;
 }
 
 /*FOOTER*/
@@ -396,6 +414,11 @@ img{
 .navegador nav ul li a{
     font-size: 1em;
     padding: 0em;
+}
+
+.navegador .cancion_actual img{
+    width: 9em;
+    height: 9em;
 }
 
 .navegador nav ul .menu_responsive{
@@ -453,12 +476,6 @@ header .perfil{
 
 section .albums{
     height: 38rem;
-}
-
-section .albums .album{
-    text-align: center;
-    width: 45%;
-    padding: 1em;
 }
 
 section .albums img{

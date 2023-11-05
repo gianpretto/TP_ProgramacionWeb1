@@ -36,7 +36,6 @@ header div{
     font-weight: 400;
     border: none;
     border-radius: .2em;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 .formulario_opcion{
@@ -50,6 +49,10 @@ header div{
 
 .hipervinculos{
     margin: 3em 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .opcion  {
